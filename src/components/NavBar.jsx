@@ -1,30 +1,21 @@
 function NavBar(props){
- 
-    const Suivant =() =>{ props.setIndex(props.index + 1)}
-    const Precedent =() =>{ props.setIndex(props.index - 1)}
-
-    return props.index>0 && props.index < props.list.length - 1?
-    <div>
-      
-      <button onClick={Precedent}>Précédent</button>
-      <button onClick={Suivant}>Suivant</button>
-    </div> : props.index==0 && props.index < props.list.length - 1 ?
-    <div>
-    
-    
-    <button onClick={Suivant}>Suivant</button>
-  </div> :  props.index == props.list.length - 1 ?
-    <div>
-    
-    <button onClick={Precedent}>Précédent</button>
-    
-  </div>  :
-    <div>
+  const boutPok =(e)=>{props.setIndex(props.list.indexOf(e))
+                        
+  }
   
-    
-    
-  </div>
+    return (
+      <div>
+        <ul>
+          {props.list.map((e)=>( <button key={e.name} onClick={()=>boutPok(e)}> {e.name}</button> ))}
+        </ul>
+      </div>
+    )
 
 
 }
 export default NavBar;
+
+
+    
+    
+
