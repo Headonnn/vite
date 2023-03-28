@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import './App.css'
 import { useState } from "react";
 import PokemonCard from "./components/PokemonCard"
@@ -29,14 +29,18 @@ function App() {
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
           color : "yellow",
+          catchPhrase : "Pika pikachu !!!"
       },
       {
         name: "Mew",
-        color : "purple"
+        color : "pink"
       },
     ];
 
-   
+    useEffect(
+      () => {
+        alert("hello pokemon trainer :)");
+      },[]);
     
     const [pokeInd, setPokeInd] = useState(0);
 
