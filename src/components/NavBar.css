@@ -1,0 +1,12 @@
+.barre{display : flex;
+        justify-content : space-between;}
+        
+
+button{
+    border : 2px solid
+}
+button  :hover{
+
+    cursor : pointer;
+    
+}

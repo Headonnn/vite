@@ -6,27 +6,33 @@ import NavBar from "./components/NavBar"
 function App() {
   const pokemonList = [
     {
-        name: "bulbasaur",
+        name: "Bulbasaur",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+        color:"green",
       },
+     
       {
-        name: "charmander",
+        name: "Charmander",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+          color : "orange",
       },
       {
-        name: "squirtle",
+        name: "Squirtle",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+          color : "blue",
       },
       {
-        name: "pikachu",
+        name: "Pikachu",
         imgSrc:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+          color : "yellow",
       },
       {
-        name: "mew",
+        name: "Mew",
+        color : "purple"
       },
     ];
 
@@ -34,7 +40,8 @@ function App() {
     
     const [pokeInd, setPokeInd] = useState(0);
 
-    return (<><PokemonCard list={pokemonList[pokeInd]}/>
+    return (<><h1 style={{color:"white"}}>Mon POKEDEX ^^</h1>
+            <PokemonCard list={pokemonList[pokeInd]}/>
           <NavBar setIndex = {setPokeInd} index={pokeInd} list ={pokemonList}/></>)
 
   
